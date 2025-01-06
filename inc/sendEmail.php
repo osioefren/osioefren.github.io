@@ -1,6 +1,6 @@
 ﻿<?php
 
-// Replace this with your own email address
+
 $siteOwnersEmail = 'efrenosio15@gmail.com';
 
 
