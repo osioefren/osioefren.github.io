@@ -20,7 +20,7 @@
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
 	
-	
+
 	
   
 </head>
@@ -304,61 +304,70 @@
 		<div class="projects-container">
 			<h2>My Projects</h2>
 			<div id="projects-list" class="projects-list">
+				<!-- Default visible projects -->
 				<a href="https://pawthway.vercel.app/" target="_blank">
 					<div class="project-card">
 						<img src="/images/Project-1.png" alt="Project Pathways">
 						<div class="project-card-body">
 							<h3>Project Pathways</h3>
-							<p>This is an example of a project description. It can provide details about the project such as its goals, outcomes, and impact.</p>
+							
 						</div>
 					</div>
 				</a>
+	
+				<a href="https://sunnycloudtechnologies.com/" target="_blank">
+				<div class="project-card">
+					
+					<img src="/images/Untitled-design-e1723425402639-qsh7ve49h5w0y7t58aknitrbh9vm9kz2ld9gnlt2w8.png" alt="Project Sunny" style="width: 200px; height: auto;">
+					<div class="project-card-body">
+						<h3>SunnyCloud</h3>
 
-					<div class="project-card">
-						<img src="https://via.placeholder.com/300x200?text=Project+Example" alt="Project Example">
-						<div class="project-card-body">
-						<h3>Project Example</h3>
-						<p>This is an example of a project description. It can provide details about the project such as its goals, outcomes, and impact.</p>
-						</div>
-				    </div>
-						<div class="project-card">
-							<img src="https://via.placeholder.com/300x200?text=Project+Example" alt="Project Example">
-							<div class="project-card-body">
-							<h3>Project Example</h3>
-							<p>This is an example of a project description. It can provide details about the project such as its goals, outcomes, and impact.</p>
-							</div>
-					    </div>
-							<!-- <div class="project-card">
-								<img src="https://via.placeholder.com/300x200?text=Project+Example" alt="Project Example">
-								<div class="project-card-body">
-								<h3>Project Example</h3>
-								<p>This is an example of a project description. It can provide details about the project such as its goals, outcomes, and impact.</p>
-								</div> -->
-						<!-- </div> -->
-						<!-- <div class="project-card">
-							<img src="https://via.placeholder.com/300x200?text=Project+Example" alt="Project Example">
-							<div class="project-card-body">
-							<h3>Project Example</h3>
-							<p>This is an example of a project description. It can provide details about the project such as its goals, outcomes, and impact.</p>
-							</div> -->
-					  <!-- </div> -->
-					  <!-- <div class="project-card">
-						<img src="https://via.placeholder.com/300x200?text=Project+Example" alt="Project Example">
-						<div class="project-card-body">
-						<h3>Project Example</h3>
-						<p>This is an example of a project description. It can provide details about the project such as its goals, outcomes, and impact.</p>
-						</div> -->
-				  <!-- </div> -->
+					</div>
+				</div>
+			  </a>
+			  <a href="https://www.blackgirlsmhc.com/" target="_blank">
+				<div class="project-card">
+					<img src="/images/Logo+email+signature.png" alt="Project 3"style="width: 300px; height: 200px; object-fit: cover;">
+					<div class="project-card-body">
+						<h3>BlackGirls</h3>
+				
+					</div>
+				</div>
+			</a>
+				<div class="project-card hidden">
+					<img src="https://via.placeholder.com/300x200?text=Project+4" alt="Project 4">
+					<div class="project-card-body">
+						<h3>Project 4</h3>
+					
+					</div>
+				</div>
+	
+				<div class="project-card hidden">
+					<img src="https://via.placeholder.com/300x200?text=Project+5" alt="Project 5">
+					<div class="project-card-body">
+						<h3>Project 5</h3>
+					
+					</div>
+				</div>
+	
+				<div class="project-card hidden">
+					<img src="https://via.placeholder.com/300x200?text=Project+6" alt="Project 6">
+					<div class="project-card-body">
+						<h3>Project 6</h3>
+				
+					</div>
+				</div>
+	
+				
+	
+				
+				
 			</div>
-		  
-			<!-- <div class="pagination">
-			  <button id="prev" class="page-btn" onclick="changePage('prev')">Previous</button>
-			  <button id="next" class="page-btn" onclick="changePage('next')">Next</button>
-			</div> -->
-		  </div>
-		  
+	
+			<!-- Load More Button -->
+			<button id="loadMoreBtn" class="load-more-btn">Load More</button>
+		</div>
 	</section>
-
 	
 	<section id="services">
 
@@ -581,6 +590,21 @@
         } else {
             hiddenSkills.style.display = "none";
             this.textContent = "Load More";
+        }
+    });
+	
+</script>
+<script>
+	document.getElementById("loadMoreBtn").addEventListener("click", function() {
+        let hiddenProjects = document.querySelectorAll(".project-card.hidden");
+
+        for (let i = 0; i < 3 && i < hiddenProjects.length; i++) {
+            hiddenProjects[i].classList.remove("hidden");
+        }
+
+        // Hide the button if no more hidden projects
+        if (document.querySelectorAll(".project-card.hidden").length === 0) {
+            this.style.display = "none";
         }
     });
 </script>
