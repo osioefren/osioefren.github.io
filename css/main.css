@@ -2690,3 +2690,25 @@ footer .copyright span:last-child::after {
 .project-sec {
     background-color: white;
 }
+/* .load-more {
+	margin-top: 10px;
+	padding: 8px 16px;
+	background-color: #BB2533;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	border-radius: 5px;
+}
+
+.load-more:hover {
+	background-color: #a11e2b;
+} */
+button#loadMoreBtn {
+    background-color: transparent;
+	margin-top: -50px !important;
+}
+ul.skill-bars {
+    margin-bottom: 0px !important;
+	
+}

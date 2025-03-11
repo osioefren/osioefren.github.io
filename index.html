@@ -131,7 +131,7 @@
    				</li>
    				<li>
    					<strong>Email:</strong>
-   					<span>efrenosio15.com</span>
+   					<span>efrenosio15gmail.com</span>
    				</li>
 
    			</ul>
@@ -140,44 +140,65 @@
    		</div>
 
    		<div class="col-six tab-full">
-
-   			<h3>Skills:</h3>
-   			
-				<ul class="skill-bars">
-				   <li>
-				   	<div class="progress percent100"><span>100%</span></div>
-				   	<strong>HTML5</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent100"><span>100%</span></div>
-				   	<strong>CSS</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent80"><span>80%</span></div>
-				   	<strong>Javascript</strong>
-				   </li>
-				   <li>
+			<h3>Skills:</h3>
+			
+			<ul class="skill-bars">
+				<li>
+					<div class="progress percent100"><span>100%</span></div>
+					<strong>HTML5</strong>
+				</li>
+				<li>
+					<div class="progress percent100"><span>100%</span></div>
+					<strong>CSS</strong>
+				</li>
+				<li>
+					<div class="progress percent80"><span>80%</span></div>
+					<strong>JavaScript</strong>
+				</li>
+				<li>
 					<div class="progress percent80"><span>80%</span></div>
 					<strong>Laravel</strong>
 				</li>
-				   <li>
-				   	<div class="progress percent90"><span>90%</span></div>
-				   	<strong>PHP</strong>
-				   </li>
-				   <li>
-
-				   	<div class="progress percent100"><span>100%</span></div>
-				   	<strong>Wordpress</strong>
-				   </li>
-				   <li>
-
-					<div class="progress percent70"><span>70%</span></div>
-					<strong>Ajax-Jquery</strong>
+				<li>
+					<div class="progress percent90"><span>90%</span></div>
+					<strong>PHP</strong>
 				</li>
-      
-				</ul> 
-
-   		</div>
+				
+			</ul> 
+		
+			<!-- Hidden details initially -->
+			<ul class="skill-bars hidden-skills" style="display: none;">
+				<li>
+					<div class="progress percent100"><span>100%</span></div>
+					<strong>WordPress</strong>
+				</li>
+				<li>
+					<div class="progress percent70"><span>70%</span></div>
+					<strong>Ajax & jQuery</strong>
+				</li>
+				<li>
+					<div class="progress percent75"><span>75%</span></div>
+					<strong>Figma</strong>
+				</li>
+				<li>
+					<div class="progress percent85"><span>85%</span></div>
+					<strong>Bootstrap</strong>
+				</li>
+				<li>
+					<div class="progress percent80"><span>80%</span></div>
+					<strong>Shopify</strong>
+				</li>
+				<li>
+					<div class="progress percent70"><span>70%</span></div>
+					<strong>Plugin Development</strong>
+				</li>
+			</ul> 
+		
+			<!-- Load More button -->
+			<div style="text-align: center;">
+				<button id="loadMoreBtn" style="margin: 0 auto; display: block;">Load More</button>
+			</div>
+		</div>
 
    	</div>
 
@@ -551,6 +572,18 @@
    <script src="js/jquery-2.1.3.min.js"></script>
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
+   <script>
+    document.getElementById("loadMoreBtn").addEventListener("click", function() {
+        let hiddenSkills = document.querySelector(".hidden-skills");
+        if (hiddenSkills.style.display === "none") {
+            hiddenSkills.style.display = "block";
+            this.textContent = "Show Less";
+        } else {
+            hiddenSkills.style.display = "none";
+            this.textContent = "Load More";
+        }
+    });
+</script>
 
 </body>
 
