@@ -2707,6 +2707,7 @@ footer .copyright span:last-child::after {
 button#loadMoreBtn {
     background-color: transparent;
 	margin-top: -50px !important;
+	color: #2ac082;
 }
 ul.skill-bars {
     margin-bottom: 0px !important;
@@ -2765,4 +2766,7 @@ ul.skill-bars {
 
 .load-more-btn:hover {
 	background-color: #0056b3;
+}
+div#message-warning {
+    display: none !important;
 }
